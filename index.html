@@ -25,14 +25,14 @@
     </style>
 </head>
 <body>
-    <video controls autoplay loop muted playsinline webkit-playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true"  src="pin/p-4k.mp4" type="video/mp4">
+    <video id="video" controls autoplay loop muted playsinline webkit-playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true"  src="pin/p-4k.mp4" type="video/mp4">
         <source src="pin/p-4k.mp4" type="video/mp4">
         <source src="pin/p-4k.webm" type="video/webm">
       </video>
 
     <script type="text/javascript">
-        wx.ready(function () {
-            video.play()
+        document.addEventListener('WeixinJSBridgeReady', function() {
+            document.getElementById('video').play()
         })
     </script>
 </body>
